@@ -2,7 +2,7 @@ import * as express from 'express'
 import {getLinkPreview} from 'link-preview-js'
 
 const app = express();
-const port = 8080; // default port to listen
+const port = process.env.PORT || 8080; // default port to listen
 
 const urlPreview = async (url: string) => {
 	try {
