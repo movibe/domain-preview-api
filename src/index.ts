@@ -23,9 +23,16 @@ app.get('/', async (req, res) => {
 	const { url } = req.query;
 	console.log(url);
 
-	const response = await urlPreview(url);
+	if (url) {
+		const response = await urlPreview(url);
 
-	res.json(response);
+		return res.json(response);
+	}
+
+	return res.json({
+		error: true,
+		message: 'Insert url params ?url='
+	});
 });
 
 // start the Express server
