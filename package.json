@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@types/express": "^4.17.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "extract-domain": "^2.2.1",
     "link-preview-js": "^2.0.1"
   }
